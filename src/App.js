@@ -1,27 +1,27 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 
-import { Home, About, Topic, Topics } from './components'
+import { Home, About, Topics } from './components'
 import { Link, Route } from './router'
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <div>
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/topics">Topics</Link></li>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/about'>About</Link></li>
+          <li><Link to='/topics'>Topics</Link></li>
         </ul>
 
         <hr />
 
-        <Route exact path="/" component={ Home } />
-        <Route path="/about" component={ About } />
-        <Route path="/topics" component={ Topics } />
+        <Route exact path='/' component={Home} />
+        <Route path='/about' component={About} />
+        <Route path='/topics' component={Topics} />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
