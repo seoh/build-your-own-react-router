@@ -1,11 +1,14 @@
 import React, { Component, PropTypes } from 'react'
+import { update } from './instance'
 
 const historyPush = (path) => {
   history.pushState({}, null, path)
+  update()
 }
 
 const historyReplace = (path) => {
   history.replaceState({}, null, path)
+  update()
 }
 
 export default class Link extends Component {
